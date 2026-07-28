@@ -1,183 +1,24 @@
-/* =====================================================
-   SAI RENUKA CAB
-   WEBSITE JAVASCRIPT
-===================================================== */
+/*=====================================================
+ Sai Renuka Cab
+ script.js
+======================================================*/
 
+// ============================
+// Smooth Scroll for Anchor Links
+// ============================
 
-/* ================= MOBILE MENU ================= */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
 
-const menuToggle = document.getElementById("menuToggle");
+        e.preventDefault();
 
-const navbar = document.getElementById("navbar");
+        const target = document.querySelector(this.getAttribute("href"));
 
-if (menuToggle && navbar) {
+        if (target) {
 
-    menuToggle.addEventListener("click", function () {
+            target.scrollIntoView({
 
-        navbar.classList.toggle("active");
-
-    });
-
-
-    const navLinks = navbar.querySelectorAll("a");
-
-    navLinks.forEach(function (link) {
-
-        link.addEventListener("click", function () {
-
-            navbar.classList.remove("active");
-
-        });
-
-    });
-
-}
-
-
-/* ================= HEADER SCROLL EFFECT ================= */
-
-const header = document.getElementById("header");
-
-window.addEventListener("scroll", function () {
-
-    if (window.scrollY > 50) {
-
-        header.classList.add("scrolled");
-
-    } else {
-
-        header.classList.remove("scrolled");
-
-    }
-
-});
-
-
-/* ================= BOOKING FORM ================= */
-
-const bookingForm = document.getElementById("bookingForm");
-
-if (bookingForm) {
-
-    bookingForm.addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-
-        const name = document.getElementById("name").value.trim();
-
-        const phone = document.getElementById("phone").value.trim();
-
-        const pickup = document.getElementById("pickup").value.trim();
-
-        const drop = document.getElementById("drop").value.trim();
-
-        const date = document.getElementById("date").value;
-
-        const time = document.getElementById("time").value;
-
-        const vehicle = document.getElementById("vehicle").value;
-
-        const trip = document.getElementById("trip").value;
-
-        const message = document.getElementById("message").value.trim();
-
-
-        if (!name || !phone || !pickup || !drop || !date) {
-
-            alert("Please fill in all required fields.");
-
-            return;
-
-        }
-
-
-        const whatsappMessage =
-
-`Hello Sai Renuka Cab,
-
-I would like to book a cab.
-
-*Customer Details*
-Name: ${name}
-Mobile: ${phone}
-
-*Journey Details*
-Pickup: ${pickup}
-Drop: ${drop}
-Travel Date: ${date}
-Pickup Time: ${time || "Not specified"}
-
-Vehicle: ${vehicle}
-Trip Type: ${trip}
-
-Additional Details:
-${message || "None"}
-
-Please share the availability and fare details.
-
-Thank you.`;
-
-
-        const whatsappNumber = "919221556555";
-
-
-        const whatsappURL =
-
-            `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
-
-        window.open(whatsappURL, "_blank");
-
-
-    });
-
-}
-
-
-/* ================= SET MINIMUM DATE ================= */
-
-const dateInput = document.getElementById("date");
-
-if (dateInput) {
-
-    const today = new Date();
-
-    const year = today.getFullYear();
-
-    const month = String(today.getMonth() + 1).padStart(2, "0");
-
-    const day = String(today.getDate()).padStart(2, "0");
-
-
-    dateInput.min = `${year}-${month}-${day}`;
-
-}
-
-
-/* ================= SMOOTH SCROLL ================= */
-
-document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-
-    anchor.addEventListener("click", function (event) {
-
-        const targetId = this.getAttribute("href");
-
-        if (targetId === "#") return;
-
-
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-
-            event.preventDefault();
-
-
-            targetElement.scrollIntoView({
-
-                behavior: "smooth",
-
-                block: "start"
+                behavior: "smooth"
 
             });
 
@@ -186,3 +27,194 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     });
 
 });
+
+// ============================
+// Sticky Header Shadow
+// ============================
+
+window.addEventListener("scroll", function () {
+
+    const header = document.querySelector(".header");
+
+    if (window.scrollY > 80) {
+
+        header.style.boxShadow = "0 10px 35px rgba(0,0,0,.15)";
+
+    } else {
+
+        header.style.boxShadow = "0 10px 30px rgba(0,0,0,.08)";
+
+    }
+
+});
+
+// ============================
+// WhatsApp Booking
+// ============================
+
+function sendWhatsApp() {
+
+    let pickup = document.getElementById("pickup").value;
+    let drop = document.getElementById("drop").value;
+    let date = document.getElementById("date").value;
+    let time = document.getElementById("time").value;
+    let trip = document.getElementById("trip").value;
+    let vehicle = document.getElementById("vehicle").value;
+    let name = document.getElementById("name").value;
+    let mobile = document.getElementById("mobile").value;
+    let message = document.getElementById("message").value;
+
+    if (
+        pickup === "" ||
+        drop === "" ||
+        name === "" ||
+        mobile === ""
+    ) {
+
+        alert("Please fill all required fields.");
+
+        return;
+
+    }
+
+    let whatsappMessage =
+`*Sai Renuka Cab Booking Request*
+
+Name : ${name}
+
+Mobile : ${mobile}
+
+Pickup : ${pickup}
+
+Drop : ${drop}
+
+Journey Date : ${date}
+
+Pickup Time : ${time}
+
+Trip Type : ${trip}
+
+Vehicle : ${vehicle}
+
+Requirement :
+
+${message}`;
+
+    let url =
+        "https://wa.me/918828556555?text=" +
+        encodeURIComponent(whatsappMessage);
+
+    window.open(url, "_blank");
+
+}
+
+// ============================
+// Fade Animation on Scroll
+// ============================
+
+const revealElements = document.querySelectorAll(
+
+".service-card,.fleet-card,.route-card,.testimonial-card,.why-card,.contact-card,.highlight-card,.feature-box"
+
+);
+
+function revealOnScroll() {
+
+    revealElements.forEach(function (element) {
+
+        const windowHeight = window.innerHeight;
+
+        const elementTop = element.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 100) {
+
+            element.style.opacity = "1";
+            element.style.transform = "translateY(0)";
+
+        }
+
+    });
+
+}
+
+revealElements.forEach(function (element) {
+
+    element.style.opacity = "0";
+    element.style.transform = "translateY(40px)";
+    element.style.transition = ".7s ease";
+
+});
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
+
+// ============================
+// Scroll To Top Button
+// ============================
+
+const topButton = document.createElement("button");
+
+topButton.innerHTML = "↑";
+
+topButton.id = "scrollTopBtn";
+
+document.body.appendChild(topButton);
+
+topButton.style.position = "fixed";
+topButton.style.right = "20px";
+topButton.style.bottom = "170px";
+topButton.style.width = "50px";
+topButton.style.height = "50px";
+topButton.style.border = "none";
+topButton.style.borderRadius = "50%";
+topButton.style.background = "#ff6b00";
+topButton.style.color = "#fff";
+topButton.style.fontSize = "22px";
+topButton.style.cursor = "pointer";
+topButton.style.display = "none";
+topButton.style.zIndex = "9999";
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 500) {
+
+        topButton.style.display = "block";
+
+    } else {
+
+        topButton.style.display = "none";
+
+    }
+
+});
+
+topButton.addEventListener("click", function () {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+// ============================
+// Current Year (if element exists)
+// ============================
+
+const year = document.getElementById("year");
+
+if (year) {
+
+    year.textContent = new Date().getFullYear();
+
+}
+
+// ============================
+// Console Message
+// ============================
+
+console.log("Sai Renuka Cab Website Loaded Successfully");

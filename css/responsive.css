@@ -1,532 +1,469 @@
-/* =====================================================
-   RESPONSIVE DESIGN
-===================================================== */
+/*=========================================
+LARGE LAPTOP
+=========================================*/
 
+@media(max-width:1200px){
 
-/* ================= TABLET ================= */
+.container{
 
-@media (max-width: 1050px) {
-
-    .navbar {
-
-        gap: 15px;
-
-    }
-
-    .navbar a {
-
-        font-size: 12px;
-
-    }
-
-    .header-phone {
-
-        display: none;
-
-    }
-
-    .services-grid {
-
-        grid-template-columns: repeat(2, 1fr);
-
-    }
-
-    .why-container {
-
-        gap: 50px;
-
-    }
+width:95%;
 
 }
 
+.hero h1{
 
-/* ================= TABLET / SMALL LAPTOP ================= */
-
-@media (max-width: 800px) {
-
-    .container {
-
-        width: min(100% - 30px, 600px);
-
-    }
-
-
-    /* HEADER */
-
-    .nav-container {
-
-        height: 70px;
-
-    }
-
-    .header-book-btn {
-
-        display: none;
-
-    }
-
-    .menu-toggle {
-
-        display: block;
-
-    }
-
-    .navbar {
-
-        position: absolute;
-
-        top: 70px;
-
-        left: 0;
-
-        width: 100%;
-
-        padding: 20px;
-
-        background: var(--white);
-
-        border-top: 1px solid var(--border);
-
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-
-        display: none;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 18px;
-
-    }
-
-    .navbar.active {
-
-        display: flex;
-
-    }
-
-
-    /* HERO */
-
-    .hero {
-
-        min-height: 680px;
-
-    }
-
-    .hero h1 {
-
-        font-size: 48px;
-
-    }
-
-    .hero-scroll {
-
-        display: none;
-
-    }
-
-
-    /* QUICK BOOKING */
-
-    .quick-booking-inner {
-
-        padding: 25px 0;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-    }
-
-    .quick-booking-actions {
-
-        width: 100%;
-
-        justify-content: space-between;
-
-        flex-wrap: wrap;
-
-    }
-
-
-    /* SECTIONS */
-
-    .section {
-
-        padding: 75px 0;
-
-    }
-
-
-    /* FLEET */
-
-    .fleet-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    /* WHY */
-
-    .why-container {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    /* CORPORATE */
-
-    .corporate-list {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    /* REVIEWS */
-
-    .reviews-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    /* BOOKING */
-
-    .booking-container {
-
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-
-    }
-
-    .booking-intro {
-
-        position: static;
-
-    }
-
-
-    /* CONTACT */
-
-    .contact-container {
-
-        grid-template-columns: 1fr;
-
-        gap: 50px;
-
-    }
-
-
-    /* FOOTER */
-
-    .footer-container {
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 40px;
-
-    }
+font-size:48px;
 
 }
 
+.section-title h2{
 
-/* ================= MOBILE ================= */
+font-size:38px;
 
-@media (max-width: 550px) {
+}
 
-    body {
+}
 
-        padding-bottom: 65px;
+/*=========================================
+TABLET
+=========================================*/
+
+@media(max-width:992px){
+
+.header .container{
+
+flex-direction:column;
+
+height:auto;
+
+padding:15px 0;
+
+}
+
+.navbar{
+
+margin:20px 0;
+
+}
+
+.navbar ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+.hero{
+
+padding-top:220px;
+
+}
+
+.hero-container{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero-features{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.service-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.routes-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.fleet-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.why-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.testimonial-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.contact-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.stats .container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.footer-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.corporate ul{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/*=========================================
+MOBILE
+=========================================*/
+
+@media(max-width:768px){
+
+.hero{
+
+padding-top:200px;
+
+}
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.hero-text{
+
+font-size:16px;
+
+}
+
+.section-title h2{
+
+font-size:30px;
+
+}
+
+.section-title p{
+
+font-size:16px;
+
+}
+
+.hero-features{
+
+grid-template-columns:1fr;
+
+}
+
+.service-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.routes-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.fleet-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.stats .container{
+
+grid-template-columns:1fr;
+
+}
+
+.booking-wrapper{
+
+padding:30px;
+
+}
+
+.booking-buttons{
+
+flex-direction:column;
+
+}
+
+.primary-btn,
+
+.secondary-btn{
+
+display:block;
+
+width:100%;
+
+text-align:center;
+
+margin:10px 0;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.header-buttons{
+
+flex-direction:column;
+
+width:100%;
+
+}
+
+.header-buttons a{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.logo img{
+
+width:150px;
+
+margin:auto;
+
+}
+
+.navbar ul{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+}
+
+/*=========================================
+SMALL MOBILE
+=========================================*/
+
+@media(max-width:480px){
+
+.container{
+
+width:92%;
+
+}
+
+.hero{
+
+padding-top:220px;
+
+}
+
+.hero h1{
+
+font-size:28px;
+
+}
+
+.section-title h2{
+
+font-size:26px;
+
+}
+
+.hero-badge{
+
+font-size:12px;
+
+}
+
+.booking-wrapper{
+
+padding:20px;
+
+}
+
+.feature-box{
+
+padding:20px;
+
+}
+
+.highlight-card{
+
+padding:20px;
+
+}
+
+.service-card{
+
+padding:25px;
+
+}
+
+.route-content{
+
+padding:20px;
+
+}
+
+.fleet-content{
+
+padding:20px;
+
+}
+
+.why-card{
+
+padding:25px;
+
+}
+
+.testimonial-card{
+
+padding:25px;
+
+}
+
+.contact-card{
+
+padding:25px;
+
+}
+
+.corporate h2{
+
+font-size:32px;
+
+}
+
+.cta-section h2{
+
+font-size:32px;
+
+}
+
+}
+
+/*=========================================
+EXTRA SMALL DEVICES
+=========================================*/
+
+@media(max-width:360px){
+
+.hero h1{
+
+font-size:24px;
+
+}
+
+.section-title h2{
+
+font-size:22px;
+
+}
+
+.call-btn,
+
+.whatsapp-btn{
+
+font-size:14px;
+
+padding:10px 16px;
+
+}
+
+.primary-btn,
+
+.secondary-btn{
+
+padding:14px 20px;
+
+font-size:15px;
+
+}
+
+}
+/* ================= CTA MOBILE FIX ================= */
+
+@media(max-width:768px){
+
+    .cta-section .hero-buttons {
+
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
 
     }
 
-    .container {
 
-        width: calc(100% - 30px);
+    .cta-section .primary-btn,
+    .cta-section .secondary-btn {
 
-    }
-
-
-    /* LOGO */
-
-    .logo-text strong {
-
-        font-size: 15px;
-
-    }
-
-    .logo-text span {
-
-        font-size: 8px;
+        width: 90%;
+        max-width: 320px;
 
     }
 
 
-    /* HERO */
+    .cta-section p {
 
-    .hero {
-
-        min-height: 650px;
-
-        background-position: 60% center;
-
-    }
-
-    .hero h1 {
-
-        font-size: 43px;
-
-        letter-spacing: -1.5px;
-
-    }
-
-    .hero-description {
-
-        font-size: 15px;
-
-    }
-
-    .hero-buttons {
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        margin-bottom: 40px;
-
-    }
-
-    .hero-trust {
-
-        gap: 12px;
-
-        justify-content: space-between;
-
-    }
-
-    .trust-divider {
-
-        height: 30px;
-
-    }
-
-    .trust-item strong {
-
-        font-size: 13px;
-
-    }
-
-    .trust-item span {
-
-        font-size: 9px;
-
-    }
-
-
-    /* QUICK BOOKING */
-
-    .quick-booking-actions {
-
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 18px;
-
-    }
-
-    .quick-booking-actions .btn {
-
-        grid-column: span 2;
-
-    }
-
-
-    /* SERVICES */
-
-    .services-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-    .service-card p {
-
-        min-height: auto;
-
-    }
-
-
-    /* ROUTES */
-
-    .routes-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-    .route-card {
-
-        padding: 18px 15px;
-
-    }
-
-    .route-from,
-
-    .route-to {
-
-        font-size: 12px;
-
-    }
-
-    .route-book {
-
-        font-size: 10px;
-
-    }
-
-    .routes-bottom {
-
-        line-height: 2;
-
-    }
-
-    .routes-bottom a {
-
-        display: block;
-
-        margin-left: 0;
-
-    }
-
-
-    /* WHY */
-
-    .why-features {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    /* BOOKING FORM */
-
-    .booking-form-wrapper {
-
-        padding: 22px 15px;
-
-    }
-
-    .form-row {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    /* CONTACT */
-
-    .contact-card {
-
-        padding: 35px 22px;
-
-    }
-
-
-    /* FOOTER */
-
-    .footer-container {
-
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-
-    }
-
-    .footer-bottom-inner {
-
-        padding: 18px 0;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-    }
-
-
-    /* MOBILE BOTTOM BAR */
-
-    .mobile-bottom-bar {
-
-        position: fixed;
-
-        display: grid;
-
-        grid-template-columns: repeat(3, 1fr);
-
-        bottom: 0;
-
-        left: 0;
-
-        width: 100%;
-
-        height: 65px;
-
-        background: var(--dark);
-
-        z-index: 2000;
-
-        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
-
-    }
-
-    .mobile-bottom-bar a {
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        justify-content: center;
-
-        gap: 2px;
-
-        color: var(--white);
-
-        border-right: 1px solid rgba(255, 255, 255, 0.1);
-
-    }
-
-    .mobile-bottom-bar a:last-child {
-
-        border-right: none;
-
-        background: var(--primary);
-
-        color: var(--dark);
-
-    }
-
-    .mobile-bottom-bar span {
-
-        font-size: 18px;
-
-        font-weight: 800;
-
-    }
-
-    .mobile-bottom-bar small {
-
-        font-size: 10px;
-
-        font-weight: 600;
+        padding:0 15px;
 
     }
 
