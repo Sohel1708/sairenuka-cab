@@ -534,7 +534,7 @@ color:#666;
 
 .popular-routes{
 
-background:#171717;
+background:#d2d2d2;
 
 }
 
@@ -591,7 +591,7 @@ color:var(--secondary);
 
 .route-content p{
 
-color:#666;
+color:#e8e6e6;
 margin-bottom:20px;
 
 }
@@ -601,7 +601,7 @@ margin-bottom:20px;
 
 display:inline-block;
 background:var(--primary);
-color:#000;
+color:#f0f0f0;
 padding:12px 28px;
 border-radius:50px;
 font-weight:700;
@@ -682,7 +682,7 @@ margin-bottom:18px;
 .fleet-content ul li{
 
 padding:8px 0;
-color:#555;
+color:#f0eeee;
 
 }
 
