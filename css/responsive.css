@@ -150,40 +150,62 @@ MOBILE
 
 @media(max-width:768px){
 
+
 .hero{
+
 min-height:auto;
 padding:150px 0 70px;
 background-position:center right;
+
 }
 
+
 .hero-container{
+
 max-width:100%;
 justify-content:center;
 text-align:center;
+
 }
+
 
 .hero-content{
+
 width:100%;
+
 }
+
 
 .hero h1{
+
 font-size:38px;
 line-height:1.2;
+
 }
+
 
 .hero-text{
+
 font-size:16px;
 max-width:100%;
+
 }
+
 
 .hero-buttons{
+
 justify-content:center;
+
 }
 
+
 .hero-features{
+
 grid-template-columns:1fr;
 max-width:100%;
+
 }
+
 
 .service-grid{
 
@@ -191,11 +213,13 @@ grid-template-columns:1fr;
 
 }
 
+
 .routes-grid{
 
 grid-template-columns:1fr;
 
 }
+
 
 .fleet-grid{
 
@@ -203,11 +227,13 @@ grid-template-columns:1fr;
 
 }
 
+
 .why-grid{
 
 grid-template-columns:1fr;
 
 }
+
 
 .contact-grid{
 
@@ -215,13 +241,14 @@ grid-template-columns:1fr;
 
 }
 
+
 .footer-grid{
 
 grid-template-columns:1fr;
-
 text-align:center;
 
 }
+
 
 .stats .container{
 
@@ -229,11 +256,13 @@ grid-template-columns:1fr;
 
 }
 
+
 .booking-wrapper{
 
 padding:30px;
 
 }
+
 
 .booking-buttons{
 
@@ -241,56 +270,106 @@ flex-direction:column;
 
 }
 
-.primary-btn,
 
+.primary-btn,
 .secondary-btn{
 
 display:block;
-
 width:100%;
-
 text-align:center;
-
 margin:10px 0;
 
 }
-.header-buttons{
 
-flex-direction:column;
 
-width:100%;
+/*================ MOBILE HEADER =================*/
+
+
+.header .container{
+
+height:75px;
+display:flex;
+flex-direction:row;
+align-items:center;
+justify-content:space-between;
+padding:0 20px;
 
 }
 
-.header-buttons a{
 
-width:100%;
+.menu-toggle{
 
-text-align:center;
+display:block;
+background:none;
+border:none;
+font-size:30px;
+cursor:pointer;
+color:#111;
 
 }
+
 
 .logo img{
 
-width:150px;
-
-margin:auto;
+width:110px;
+margin:0;
 
 }
+
+
+.header-buttons{
+
+display:none;
+
+}
+
+
+/* MOBILE SIDEBAR MENU */
+
+
+.navbar{
+
+position:fixed;
+top:75px;
+left:-300px;
+width:280px;
+height:100vh;
+background:#fff;
+padding-top:30px;
+transition:.3s;
+box-shadow:5px 0 20px rgba(0,0,0,.2);
+z-index:9999;
+
+}
+
+
+.navbar.active{
+
+left:0;
+
+}
+
 
 .navbar ul{
 
+display:flex;
 flex-direction:column;
-
-gap:15px;
-
-}
+gap:20px;
+padding:30px;
 
 }
 
-/*=========================================
-SMALL MOBILE
-=========================================*/
+
+.navbar ul li a{
+
+font-size:18px;
+color:#222;
+
+}
+
+
+}
+
 
 @media(max-width:480px){
 
