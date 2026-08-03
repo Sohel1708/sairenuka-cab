@@ -218,3 +218,17 @@ if (year) {
 // ============================
 
 console.log("Sai Renuka Cab Website Loaded Successfully");
+const menuToggle = document.querySelector(".menu-toggle");
+
+const navbar = document.querySelector(".navbar");
+
+
+if(menuToggle){
+
+menuToggle.addEventListener("click",()=>{
+
+navbar.classList.toggle("active");
+
+});
+
+}
