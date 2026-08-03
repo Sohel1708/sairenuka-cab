@@ -151,39 +151,38 @@ MOBILE
 @media(max-width:768px){
 
 .hero{
+min-height:auto;
+padding:150px 0 70px;
+background-position:center right;
+}
 
-padding-top:200px;
+.hero-container{
+max-width:100%;
+justify-content:center;
+text-align:center;
+}
 
+.hero-content{
+width:100%;
 }
 
 .hero h1{
-
-font-size:34px;
-
+font-size:38px;
+line-height:1.2;
 }
 
 .hero-text{
-
 font-size:16px;
-
+max-width:100%;
 }
 
-.section-title h2{
-
-font-size:30px;
-
-}
-
-.section-title p{
-
-font-size:16px;
-
+.hero-buttons{
+justify-content:center;
 }
 
 .hero-features{
-
 grid-template-columns:1fr;
-
+max-width:100%;
 }
 
 .service-grid{
@@ -255,13 +254,6 @@ text-align:center;
 margin:10px 0;
 
 }
-
-.hero-buttons{
-
-flex-direction:column;
-
-}
-
 .header-buttons{
 
 flex-direction:column;
@@ -468,3 +460,141 @@ font-size:15px;
     }
 
 }
+/*====================================================
+PREMIUM HERO RESPONSIVE
+====================================================*/
+
+@media(max-width:1200px){
+
+.premium-left h1{
+font-size:54px;
+}
+
+.booking-bar-box{
+grid-template-columns:1fr 1fr 180px 180px;
+}
+
+}
+
+@media(max-width:992px){
+
+.premium-hero{
+padding:150px 0 80px;
+}
+
+.premium-hero-wrapper{
+grid-template-columns:1fr;
+text-align:center;
+gap:40px;
+}
+
+.premium-left p{
+margin:0 auto 35px;
+}
+
+.premium-buttons{
+justify-content:center;
+}
+
+.premium-features{
+grid-template-columns:repeat(2,1fr);
+}
+
+.premium-right img{
+width:450px;
+margin:auto;
+}
+
+.booking-bar{
+margin-top:0;
+padding-top:40px;
+}
+
+.booking-bar-box{
+grid-template-columns:1fr;
+}
+
+.strip-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.premium-hero{
+padding:140px 0 70px;
+}
+
+.premium-left h1{
+font-size:38px;
+}
+
+.premium-left p{
+font-size:16px;
+line-height:1.8;
+}
+
+.premium-features{
+grid-template-columns:1fr;
+}
+
+.premium-buttons{
+flex-direction:column;
+}
+
+.premium-buttons .primary-btn,
+.premium-buttons .secondary-btn,
+.premium-buttons .whatsapp-btn{
+width:100%;
+text-align:center;
+}
+
+.premium-right img{
+width:100%;
+max-width:360px;
+}
+
+.booking-bar-box{
+padding:20px;
+}
+
+.booking-bar-box input{
+height:52px;
+}
+
+.booking-bar-box .primary-btn{
+width:100%;
+text-align:center;
+}
+
+.strip-grid{
+grid-template-columns:1fr;
+}
+
+.strip-item{
+padding:25px;
+}
+
+}
+
+@media(max-width:480px){
+
+.premium-left h1{
+font-size:30px;
+}
+
+.premium-tag{
+font-size:12px;
+padding:8px 14px;
+}
+
+.premium-left p{
+font-size:15px;
+}
+
+.premium-right img{
+max-width:300px;
+}
+
+}   

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<circle cx="256" cy="256" r="210" fill="none" stroke="#0A2540" stroke-width="18"/>
+<path d="M120 300 Q256 120 392 210" fill="none" stroke="#FFC107" stroke-width="18" stroke-linecap="round"/>
+<path d="M170 285h170l20 28H150z" fill="#0A2540"/>
+<rect x="220" y="245" width="72" height="24" rx="6" fill="#FFC107"/>
+<circle cx="195" cy="322" r="16" fill="#FFC107"/><circle cx="317" cy="322" r="16" fill="#FFC107"/>
+<path d="M320 115 l18 10 -18 10 4-8-20-2 20-2z" fill="#0A2540"/>
+<text x="256" y="395" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#0A2540">SAIRENUKA CAB</text>
+</svg>
