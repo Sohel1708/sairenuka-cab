@@ -2276,7 +2276,7 @@ display:none;
 
     object-fit: contain;
 
-    margin-bottom: 14px;
+    margin: 0 auto 14px;
 
     transition: transform 0.3s ease;
 
