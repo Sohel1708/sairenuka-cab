@@ -2250,3 +2250,138 @@ display:none;
 }
 
 }
+/* =====================================================
+   FEATURE STRIP ICONS
+===================================================== */
+
+.feature-strip .strip-item {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 25px 15px;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+}
+
+.feature-strip .strip-item img {
+
+    width: 52px;
+    height: 52px;
+
+    object-fit: contain;
+
+    margin-bottom: 14px;
+
+    transition: transform 0.3s ease;
+
+}
+
+.feature-strip .strip-item h3 {
+
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.4;
+
+}
+
+
+/* Hover effect */
+
+.feature-strip .strip-item:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.feature-strip .strip-item:hover img {
+
+    transform: scale(1.12);
+
+}
+/* =====================================================
+   FLOATING CALL & WHATSAPP ICONS
+===================================================== */
+
+.floating-buttons {
+
+    position: fixed;
+
+    right: 20px;
+    bottom: 90px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    z-index: 9999;
+
+}
+
+
+.floating-buttons a {
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,.22);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.floating-buttons a i {
+
+    font-size: 23px;
+
+}
+
+
+/* Call */
+
+.floating-call {
+
+    background: #111;
+    color: #fff;
+
+}
+
+
+/* WhatsApp */
+
+.floating-whatsapp {
+
+    background: #25D366;
+    color: #fff;
+
+}
+
+
+/* Hover */
+
+.floating-buttons a:hover {
+
+    transform: scale(1.1);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.28);
+
+}

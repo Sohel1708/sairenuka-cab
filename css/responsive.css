@@ -928,4 +928,104 @@ display:none;
         height:calc(100vh - 70px);
     }
 }
+/* =====================================================
+   FEATURE STRIP - RESPONSIVE ICONS
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .feature-strip .strip-item {
+
+        padding: 22px 10px;
+
+    }
+
+    .feature-strip .strip-item img {
+
+        width: 48px;
+        height: 48px;
+
+        margin-bottom: 10px;
+
+    }
+
+    .feature-strip .strip-item h3 {
+
+        font-size: 16px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .feature-strip .strip-item img {
+
+        width: 44px;
+        height: 44px;
+
+    }
+
+    .feature-strip .strip-item h3 {
+
+        font-size: 15px;
+
+    }
+
+}
+/* =====================================================
+   FLOATING BUTTONS - MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .floating-buttons {
+
+        right: 14px;
+        bottom: 75px;
+
+        gap: 10px;
+
+    }
+
+    .floating-buttons a {
+
+        width: 46px;
+        height: 46px;
+
+    }
+
+    .floating-buttons a i {
+
+        font-size: 20px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .floating-buttons {
+
+        right: 12px;
+        bottom: 70px;
+
+    }
+
+    .floating-buttons a {
+
+        width: 44px;
+        height: 44px;
+
+    }
+
+    .floating-buttons a i {
+
+        font-size: 19px;
+
+    }
+
+}
 
