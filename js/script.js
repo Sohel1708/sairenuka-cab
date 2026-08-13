@@ -218,24 +218,62 @@ if (year) {
 // ============================
 
 console.log("Sai Renuka Cab Website Loaded Successfully");
-const menuToggle = document.querySelector(".menu-toggle");
 
+// ============================
+// Responsive Mobile / Tablet Menu
+// ============================
+
+const menuToggle = document.querySelector(".menu-toggle");
 const navbar = document.querySelector(".navbar");
 
+function closeMenu() {
+    if (!navbar || !menuToggle) return;
 
-if(menuToggle){
+    navbar.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open menu");
 
-menuToggle.addEventListener("click",()=>{
-
-navbar.classList.toggle("active");
-
-});
-
+    const icon = menuToggle.querySelector(".menu-icon");
+    if (icon) icon.textContent = "☰";
 }
 
-function toggleMenu(){
+function openMenu() {
+    if (!navbar || !menuToggle) return;
 
-document.getElementById("navbar")
-.classList.toggle("active");
+    navbar.classList.add("active");
+    menuToggle.setAttribute("aria-expanded", "true");
+    menuToggle.setAttribute("aria-label", "Close menu");
 
+    const icon = menuToggle.querySelector(".menu-icon");
+    if (icon) icon.textContent = "✕";
+}
+
+if (menuToggle && navbar) {
+    menuToggle.addEventListener("click", function () {
+        if (navbar.classList.contains("active")) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    navbar.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            closeMenu();
+        });
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!navbar.classList.contains("active")) return;
+
+        if (!navbar.contains(event.target) && !menuToggle.contains(event.target)) {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeMenu();
+        }
+    });
 }
