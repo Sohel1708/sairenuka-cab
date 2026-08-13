@@ -2332,7 +2332,6 @@ display:none;
     height: 52px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -2349,14 +2348,20 @@ display:none;
 }
 
 
-.floating-buttons a i {
+.call-svg,
+.whatsapp-svg {
 
-    font-size: 23px;
+    width: 28px;
+    height: 28px;
+
+    fill: #fff;
+
+    display: block;
 
 }
 
 
-/* Call */
+/* CALL */
 
 .floating-call {
 
@@ -2366,7 +2371,7 @@ display:none;
 }
 
 
-/* WhatsApp */
+/* WHATSAPP */
 
 .floating-whatsapp {
 
@@ -2376,7 +2381,7 @@ display:none;
 }
 
 
-/* Hover */
+/* HOVER */
 
 .floating-buttons a:hover {
 

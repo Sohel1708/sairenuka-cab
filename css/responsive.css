@@ -996,9 +996,16 @@ display:none;
 
     }
 
-    .floating-buttons a i {
+    .floating-icon {
 
-        font-size: 20px;
+        font-size: 25px;
+
+    }
+
+    .whatsapp-svg {
+
+        width: 24px;
+        height: 24px;
 
     }
 
@@ -1021,11 +1028,17 @@ display:none;
 
     }
 
-    .floating-buttons a i {
+    .floating-icon {
 
-        font-size: 19px;
+        font-size: 23px;
+
+    }
+
+    .whatsapp-svg {
+
+        width: 23px;
+        height: 23px;
 
     }
 
 }
-
